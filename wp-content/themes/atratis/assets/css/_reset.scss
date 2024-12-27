@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1246px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $fontTexto;
+    font-size: 16px;
+
+    overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontTitulo;
+    margin: 0;
+    color: $secondary;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 55px;
+}
+
+h2 {
+    font-size: 37px;
+    line-height: 50px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 33px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 31px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 29px;
+    margin: 0;
+    font-family: $fontTexto;
+    color: $fontCorTexto;
+}
+
+a {
+    font-family: $fontTitulo;
+    color: $fontCorTexto;
+}
+
+.btn-padrao {
+    background: $primary;
+    color: $branco;
+    transition: 0.5s ease-in-out;
+    padding: 12px 30px 12px 30px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    display: block;
+    margin-top: 20px;
+    width: fit-content;
+
+    svg {
+        transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+        background: $secondary;
+
+        color: $branco !important;
+
+        svg {
+            fill: $branco !important;
+        }
+    }
+}
+
+.btn-secundario {
+    background: $branco;
+    color: $secondary;
+    transition: 0.5s ease-in-out;
+    padding: 9px 21px 9px 21px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    border: 1px solid $secondary;
+
+    svg {
+        transition: 0.5s ease-in-out;
+        fill: $primary;
+    }
+
+    &:hover {
+        background: $secondary;
+
+        color: $branco !important;
+
+        svg {
+            fill: $branco !important;
+        }
+    }
+}
+
+
+.assinatura {
+    float: right;
+    margin: 0;
+    width: 30px;
+    @media screen and (max-width: 767px){
+      /* margin: 20px auto; */
+      float: none;
+    }
+}
+.assinatura h2 {
+float: right;
+margin: 0 0 0;
+}
+.assinatura h2 a {
+background: rgba(0, 0, 0, 0) url("../images/atratis.png") no-repeat scroll 0 0;
+float: right;
+height: 22px;
+overflow: hidden;
+text-indent: -9999px;
+transition: all 300ms ease 0s;
+width: 27px;
+}
+.assinatura h2 a:hover {
+background-position: 0 0;
+transition: all 300ms ease 0s;
+width: 80px;
+}
+
+/* Estilize a scrollbar */
+::-webkit-scrollbar {
+    width: 7px; /* Largura da scrollbar */
+  }
+  
+  /* Estilize o polegar da scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: $primary; /* Cor primária */
+    border-radius: 1px; /* Borda arredondada */
+  }
+  
+  /* Estilize a área de track (opcional) */
+  ::-webkit-scrollbar-track {
+    background-color: #fefefe; /* Cor secundária */
+  }
+
+  .submit-btn {
+    &:hover {
+        background: $primary !important;
+        color: #fff !important;
+    }
+}
+
+.abrir_pesquisa {
+    cursor: pointer;
+  }
+  
+  .pesquisa_full{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 999999;
+    -webkit-backface-visibility: hidden;
+    top: 100%;
+    left: 100%;
+    right: 100%;
+    bottom: 100%;
+    transform: scale(1.2);
+    opacity:0;
+  
+    transition: opacity .2s ease-in-out;
+  
+    &.on{
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1);
+      opacity:1;
+  
+      .conteudo{
+        display:block;
+      }
+    }
+  
+  
+    button.fechar_pesquisa{
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      border: 0;
+      width: 33px;
+      font-size: 2.5rem;
+      background: none;
+      border: none;
+      color: #979595;
+    }
+  
+    .conteudo{
+      display:none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+  
+      @media screen and (max-width: 767px){
+        width: 100%;
+        text-align: center;
+      }
+  
+      form{
+        width:527px;
+        padding:0px 30px;
+        max-width:100%;
+        background: transparent;
+        border: 0;
+  
+        @media screen and (max-width: 767px){
+          width: 100%;
+        }
+  
+        input{
+          width: 100%;
+          font-size: 3.4rem;
+          border: none;
+          color: #fff;
+          background-color: transparent;
+          text-align: center;
+  
+          @media screen and (max-width: 767px){
+            text-align: center;
+            font-size: 18px;
+          }
+  
+        }
+  
+        span{
+          width:100%;
+          font-size: 0.875rem;
+          color: #a0a0a0;
+          text-align: center;
+          margin-top: 1rem;
+          display:block;
+          
+        }
+      }
+    }
+  }
+
+  
