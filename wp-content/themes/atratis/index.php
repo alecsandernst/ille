@@ -40,6 +40,7 @@
 				<?php while($banQuery->have_posts()) : $banQuery->the_post(); 
 					$img_url = get_the_post_thumbnail_url();
 					
+					$subbtitulo = get_field('banner_subbtitulo_html');
 					$titulo = get_field('banner_titulo_html'); 
 					$conteudo = get_field('banner_descricao'); 
 
@@ -98,6 +99,9 @@
 							<div class="col-12 col-lg-12">
 								<div class="texto <?php echo $posConteudo; ?>" data-aos="fade-right" data-aos-duration="1000">
 
+									
+
+									<h4><?php echo $subbtitulo; ?></h4>
 									<?php if($titulo): ?>
 										<h1 ><?php echo $titulo; ?></h1>
 									<?php endif; ?>

@@ -47,14 +47,14 @@
 </a> -->
 
 
-<footer style="background-image: url('<?php echo $background_footer['url']; ?>')">
-    <div class="container">
+<footer>
+    <!-- <div class="container"> -->
 
-        <div class="row" style="padding-top: 30px">
-            <div class="col-lg-3">
-                <div class="column-um">
+        <!-- <div class="row" style="padding-top: 30px"> -->
+            <!-- <div class="col-lg-3"> -->
+                <!-- <div class="column-um">
                     <img src="<?php echo $logo_png_branco['url'];?>" alt="<?php echo $logo_png_branco['alt'];?>">
-                    <p><?php echo $descricao_footer;?></p>
+                    <p><?php echo $descricao_footer;?></p> -->
 
                         <!-- <h4>Nossas Redes</h4>
                         <div class="links-footer">
@@ -68,7 +68,7 @@
                                 <?php
                             }?>
                         </div> -->
-                </div>
+                <!-- </div>
             </div>
             <div class="col-lg-3">
                 <div class="column-dois">
@@ -143,20 +143,17 @@
                     
                 </div>
             </div>
-        </div>
+        </div> -->
 
                       
         
-    </div>
-    <div class="final">
+    <!-- </div> -->
+    <div class="final" style="background-image: url('<?php echo $background_footer['url']; ?>')">
         <div class="container">
             <div class="row">
-                <div class="col-12 content-final" style="
-                    
-                ">
+                <div class="col-12 content-final" style="">
                         <div class="lgpd">
-                            <div class="lgpd-title">
-                                <p style="color: #fff">Atratis - CNPJ: 11.647.486/0001-70</p>  
+                            <div class="lgpd-title"> 
                                 <?php
                                     wp_nav_menu([
                                         'menu'            => 'Menu LGPD',
@@ -171,6 +168,11 @@
                                 ?>
                             </div>
                             
+                        </div>
+                        <div class="logo-footer">
+                             <a href="<?php echo get_home_url(); ?>">    
+                                <img src="<?php echo $logo_png_branco['url']?>" alt="<?php echo $logo_png_branco['alt']?>">
+                            </a>
                         </div>
                         <div class="assinatura">
                             <h2>

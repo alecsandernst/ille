@@ -79,8 +79,8 @@ jQuery(document).ready(function () {
 });
 
 jQuery('.owl-carousel-banner').owlCarousel({
-  loop:false,
-  margin:0,
+  loop:true,
+  margin:10,
   dots: true,
   nav:false,
   responsive: {
@@ -97,9 +97,9 @@ jQuery('.owl-carousel-banner').owlCarousel({
 });
 
 jQuery('.owl-carousel-mobile').owlCarousel({
-  loop:false,
+  loop:true,
   margin:0,
-  dots: false,
+  dots: true,
   nav:false,
   responsive: {
       0: {

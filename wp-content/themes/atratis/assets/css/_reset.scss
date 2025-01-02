@@ -16,7 +16,7 @@
 body {
     font-family: $fontTexto;
     font-size: 16px;
-
+    background-color: #F5EEE6 !important;
     overflow-x: hidden !important;
 }
 
@@ -60,13 +60,13 @@ a {
 }
 
 .btn-padrao {
-    background: $primary;
-    color: $branco;
+    background: #AD5A3D !important;
+    color: #fff !important;
     transition: 0.5s ease-in-out;
     padding: 12px 30px 12px 30px;
     border-radius: 10px;
     text-decoration: none !important;
-    display: block;
+    display: block; 
     margin-top: 20px;
     width: fit-content;
 
@@ -75,9 +75,9 @@ a {
     }
 
     &:hover {
-        background: $secondary;
+        background: $branco;
 
-        color: $branco !important;
+        color: $primary !important;
 
         svg {
             fill: $branco !important;
@@ -86,13 +86,13 @@ a {
 }
 
 .btn-secundario {
-    background: $branco;
-    color: $secondary;
+    background:#AD5A3D !important;
+    color: #fff;
     transition: 0.5s ease-in-out;
     padding: 9px 21px 9px 21px;
     border-radius: 10px;
     text-decoration: none !important;
-    border: 1px solid $secondary;
+    // border: 1px solid $secondary;
 
     svg {
         transition: 0.5s ease-in-out;
@@ -100,9 +100,9 @@ a {
     }
 
     &:hover {
-        background: $secondary;
+        background: #fff;
 
-        color: $branco !important;
+        color: #AD5A3D !important;
 
         svg {
             fill: $branco !important;
