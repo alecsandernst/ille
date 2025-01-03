@@ -114,12 +114,15 @@ jQuery('.owl-carousel-mobile').owlCarousel({
   }
 });
 
-jQuery('.owl-solucoes').owlCarousel({
-  loop:true,
+jQuery('.owl-projetos').owlCarousel({
+  loop:false,
   margin:20,
   dots: true,
   margin: 30,
   nav:false,
+  // URLhashListener:true,
+  //       autoplayHoverPause:true,
+  //       startPosition: 'URLHash'
   responsive: {
       0: {
           items: 1

@@ -15,7 +15,6 @@ $classe = get_sub_field('classe');
 $link_do_cta = get_sub_field('link_do_cta');
 $texto_do_cta = get_sub_field('texto_do_cta');
 
-
 $image = get_sub_field('imagem');
 $backgroundSection = get_sub_field('backgroundsection');
 $titulo = get_sub_field('titulo');
@@ -68,23 +67,38 @@ if($animI == 0):
                         <?php
                     }?>
             </div>
-            <div class="owl-projetos-ille">
-                <div class="owl-carousel owl-carousel-banner owl-theme">
-                    <div class="col-lg-12">
-                        
-                    </div>
-                </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                    <?php if (have_rows('galeria_projetos')): ?>
+                        <div class="galeria">
+                        <div class="owl-projetos owl-carousel owl-theme">
+                            <?php while (have_rows('galeria_projetos')): the_row(); 
+                                $imagem_projetos = get_sub_field('imagem_projetos');
+                                $titulo_texto = get_sub_field('titulo_texto');
+                                $texto_imagem = get_sub_field('texto_imagem'); ?>
+                                
+                                <div class="galeria-item">
+                                    <img src="<?php echo esc_url($imagem_projetos['url']); ?>" alt="<?php echo esc_attr($imagem_projetos['alt']); ?>">
+                                    
+                                    <div class="overlay">
+                                        <div class="texto">
+                                            <h3><?php echo esc_html($titulo_texto); ?></h3>
+                                            <p><?php echo esc_html($texto_imagem); ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
             </div>
-
-                    
-
-                    <!-- <?php if($link_do_cta){
-                        ?>
-                            <a href="<?php echo $link_do_cta; ?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $animacaoImagem; ?>>
-                        <?php
-                    }?> -->
-                    
+            <!-- <?php if($link_do_cta){
+                ?>
+                    <a href="<?php echo $link_do_cta; ?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $animacaoImagem; ?>>
+                <?php
+            }?> -->  
         </div> 
     </div>
 
