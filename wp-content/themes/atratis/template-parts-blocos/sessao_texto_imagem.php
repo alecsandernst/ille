@@ -57,27 +57,34 @@ if($animI == 0):
     
     <div class="container">
         <div class="row align-items-center" style="flex-direction: <?php echo $direction; ?>">
-            <div class="col-lg-6"  >
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $animacaoImagem; ?>>
-            </div>
-            <div class="col-lg-6" <?php echo $animacaoConteudo; ?>>
-                    <?php if($subtitulo){
+            <div class="col-lg-12 titulosubtitulo"  <?php echo $animacaoConteudo; ?>>
+
+                <h2 style="<?php echo $corFonte;?>"><?php echo $titulo;?></h2>
+                <?php echo $conteudo;?>
+
+                <?php if($subtitulo){
                         ?>
                             <h4><?php echo $subtitulo;?></h4>
                         <?php
                     }?>
+            </div>
+            <div class="owl-projetos-ille">
+                <div class="owl-carousel owl-carousel-banner owl-theme">
+                    <div class="col-lg-12">
+                        
+                    </div>
+                </div>
+            </div>
+
                     
 
-                    <h2 style="<?php echo $corFonte;?>"><?php echo $titulo;?></h2>
-                    <?php echo $conteudo;?>
-
-                    <?php if($link_do_cta){
+                    <!-- <?php if($link_do_cta){
                         ?>
                             <a href="<?php echo $link_do_cta; ?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $animacaoImagem; ?>>
                         <?php
-                    }?>
+                    }?> -->
                     
-            </div>
         </div> 
     </div>
 
