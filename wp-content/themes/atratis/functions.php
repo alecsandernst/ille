@@ -7,6 +7,7 @@
     
     /* THUMBNAILS CONFIGS */
     add_theme_support('post-thumbnails');
+    add_theme_support('custom-background');
     add_image_size('4x3', 600, 400, true);
 
     //Removendo barra administrativa quando logado, no front-end

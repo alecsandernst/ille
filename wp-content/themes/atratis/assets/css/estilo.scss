@@ -39,15 +39,10 @@
 
 
 .owl-dots{
-    position: absolute !important;
-    left: 0 !important;
-    margin-left: 23px !important;
-    margin-bottom: 30px !important;
+    text-align: center;
     display: flex !important;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 8px;
-    
-
 
     @media (min-width: 1200px) {
         .owl-dots {
@@ -225,6 +220,7 @@
 
     .owl-theme .owl-nav.disabled + .owl-dots {
         z-index: 99;
+        margin-top: 0px !important;
         position: absolute;
         width: 520px;
         bottom: 10px;
@@ -795,12 +791,98 @@ footer  {
     }
 }
 
-
 .sessaoTextoImagem {
     padding: 60px 0;
     background-position: bottom;
-    overflow: hidden;
 
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        text-align: left;
+
+
+
+        max-width: 511px;
+        width: 100%;
+        margin-bottom: 8px;
+
+        span {
+            color: $primary;
+        }
+
+        @media screen and (max-width: 992px) {
+            margin-top: 20px;
+        }
+    }
+
+    h4 {
+        color: $primary;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 29px;
+        text-align: left;
+
+    
+        margin-bottom: 21px;
+        max-width: 531px;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+}
+
+
+.sessaoProjetos {
+    padding: 60px 0;
+    background-position: bottom;
+    overflow: hidden; 
+    
+    .owl-item {
+        margin-right: 10px !important;
+    }
+
+    .owl-dots{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+       
+    
+        @media (min-width: 1200px) {
+            .owl-dots {
+                gap: 8px;
+            }
+        }
+    
+        .owl-dot {
+            span {
+                width: 48px !important;
+                height: 4px !important;
+                border-radius: 0 !important;
+                pointer-events: none;
+                background: #d4a494 !important;
+            }
+        }
+    
+        .owl-dot.active {
+            
+            span {
+                transition: 0.3s ease-in-out;
+                width: 48px !important;
+                height: 8px !important;
+                background-color: #AD5A3D !important;
+            }
+        }
+    }
+    
     .owl-stage-outer {
         overflow: visible;
     }
@@ -859,8 +941,11 @@ footer  {
     .galeria {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 5px !important;
         justify-content: center;
+        margin-top: 50px;
+
+        
     }
 
     
@@ -911,6 +996,7 @@ footer  {
                 font-size: 24px;
                 margin: 0 0 10px;
                 color: white !important;
+                max-width: 363px;
             }
         
             p {
@@ -919,6 +1005,7 @@ footer  {
                 font-size: 16px;
                 line-height: 27px;
                 color: white !important;
+                max-width: 413px;
             }
         }
     }
@@ -930,6 +1017,13 @@ footer  {
     img {
         width: 100%;
         border-radius: 20px;
+    }
+
+    .btnProjetos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
     }
 
 }
@@ -2475,18 +2569,21 @@ footer  {
 
 .sessaoGaleriaCarrosel {
     padding: 60px 0;
-    overflow: hidden;
     position: relative;
+    display: flex;
 
     .full-bloco {
         position: absolute;
         right: 0;
         height: 70%;
         z-index: 2;
-        background: #fff;
+        background: url('http://localhost/illearquitetura/wp-content/uploads/2025/01/Backgound.jpg');
+        background-size: contain;
         padding-left: 30px;
         display: flex;
         align-items: center;
+        margin-bottom: -50px;
+        border-radius: 20px;
 
         @media screen and (max-width: 992px) {
             position: relative;
@@ -2500,22 +2597,38 @@ footer  {
         }
     }
 
-    .owl-stage-outer {
-        overflow: visible;
-    }
-
     .title {
+
+
+        h2 {
+            font-family: 'Outfit';
+            font-size: 35px;
+            font-weight: 300;
+            line-height: 8px;
+            text-align: left;
+            margin-bottom: 50px;
+
+        }
+
+        span {
+            font-weight: 700px;
+            color: #AD5A3D;
+        }
+
+    }
+    .title-caixa {
         
 
         h2 {
             width: 100%;
-            max-width: 474px;
+            max-width: 484px;
             margin-bottom: 19px;
 
-            font-size: 37px;
-            font-weight: 400;
-            line-height: 47px;
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 45px;
             text-align: left;
+            color: #FFFFFF !important;
             
             @media screen and (max-width: 920px) {
                 text-align: center;
@@ -2523,9 +2636,11 @@ footer  {
         }
 
         p {
+            font-size: 17px;
+            line-height: 28px;  
             width: 100%;
             max-width: 468px;
-
+            color: #FFFFFF;
             @media screen and (max-width: 920px) {
                 text-align: center;
             }
@@ -2545,8 +2660,8 @@ footer  {
         .item-galeria {
             border-radius: 20px;
             img {
-                width: 358px;
-                height: 431px;
+                margin-left: -300px !important;
+                left: 0;
                 object-fit: cover;
                 padding: 10px;
                 border-radius: 20px;
@@ -2556,6 +2671,11 @@ footer  {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                img {
+                    max-width: 500px;
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -2664,17 +2784,48 @@ footer  {
    }
 } */
 
- .sessaoDepoimentos {
-    padding: 60px 0;
-    background: #F8F8FC;
+.sessaoDepoimentos {
+    padding: 60px 0; 
+    
+    .custom-pag {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+
+        .prev-btn, .next-btn {
+            width: 39px;
+            height: 39px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .next-btn {
+            background-color: #fff;
+
+        }
+    }
+
 
     .title {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
+        text-align: top;
+        margin-bottom: 80px;
+        color: white !important;
+        font-family: 'Outfit';
+
+        img {
+            width: 79px;
+            height: 106px;
+        }
 
         h4 {
             font-size: 18px;
@@ -2682,17 +2833,14 @@ footer  {
             line-height: 28px;
             letter-spacing: 0.1em;
             text-align: center;
-            color: $primary;
         }
 
         h2 {
-
-            font-size: 34px;
-            font-weight: 800;
-            line-height: 40px;
-            text-align: center;
-            max-width: 401px;
-
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 45px;
+            max-width: 233px;
+            color: white;
             span {
                 font-weight: 300;
             }
@@ -2701,29 +2849,110 @@ footer  {
     }
 
     .grid-depoimentos {
+        width: 384px;
+        width: 100%;
+        height: 304px;
+
         .item-depoimento {
-            padding: 41px 72px;
-            background: $branco;
+            padding: 32px 35px;
+            background: #fff;
             border: 1px solid #D6D6D6;
+            border-radius: 10px;
 
             p {
+                max-width: 317px !important;
+                font-family: 'Outfit';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 29px;
                 margin: 14px 0 15px;
+                color: #4F5F82;
             }
 
             small {
                 display: block;
-                //styleName: Texto;
-                font-family: 'Sora';
-                font-size: 15px;
+                max-width: 175px !important;
+                width: 100%;
+                font-family: 'Outfit';
+                font-size: 16px;
                 font-weight: 400;
                 line-height: 29px;
                 text-align: left;
-                color: $fontCorTexto;
-
+                color: #4F5F82;
             }
         }
     }
-} 
+
+    .autor-info {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .autor-detalhes {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+                font-size: 18px;
+                color: #000;
+            }
+
+            small {
+                font-size: 14px;
+                color: #777;
+            }
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: -70px;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 10px;
+
+        button.owl-prev, 
+        button.owl-next {
+            background: #fff;
+            border: 1px solid #D6D6D6;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #000;
+
+            &:hover {
+                background: #ff6600;
+                color: #fff;
+            }
+        }
+    }
+
+    .owl-prev::before {
+        content: '\f104';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+    }
+
+    .owl-next::before {
+        content: '\f105';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+    }
+}
+ 
 
 .sessaoDiferenciais {
     padding: 60px 0;

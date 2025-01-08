@@ -14,7 +14,7 @@ $animI = get_sub_field('escolha_animacao_imagem');
 $classe = get_sub_field('classe');
 $link_do_cta = get_sub_field('link_cta');
 $texto_do_cta = get_sub_field('texto_cta');
-
+$titulo_caixa = get_sub_field('titulo_caixa');
 
 $image = get_sub_field('imagem');
 $backgroundSection = get_sub_field('backgroundsection');
@@ -67,36 +67,35 @@ if($animI == 0):
 
     
     <div class="container">
+        <div class="row row-reverse">
+            <div class="col-12">
+                <h2>
+                  <div class="title" data-aos='fade-left' data-aos-duration='1000'>
+                    <h2><?php echo $titulo; ?></h2>
+                  </div>
+                </h2>
+            </div>
+        </div>
         <div class="row row-reverse" >
 
-            <div class="col-lg-7">
+            <!-- <div class="col-lg-7"> -->
                 <div class="conteiner-carrosel">
-                    <div class="owl-galeria-carrosel owl-carousel owl-theme">
                     <?php foreach($lista_imagens as $item): ?>
                         <div class="item-galeria">
                             <img src="<?php echo $item['imagem']['url'];?>" alt="<?php echo $item['imagem']['alt'];?>">
                         </div>
                     <?php endforeach; ?>
-                    </div>
-                </div>
-                
-            </div>
+                </div> 
+            <!-- </div> -->
 
-            <div class="col-lg-5 full-bloco" >
-                <div class="title" data-aos='fade-left' data-aos-duration='1000'>
-                    <h2><?php echo $titulo; ?></h2>
+            <div class="col-lg-5 full-bloco">
+                <div class="title-caixa" data-aos='fade-left' data-aos-duration='1000'>
+                    <h2><?php echo $titulo_caixa; ?></h2>
                     <p><?php echo $descricao; ?></p>
                     <a href="<?php echo $link_do_cta; ?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
                 </div>
             </div>
-
-
-            
         </div> 
-
-
-        
-
     </div>
 
 </section>

@@ -81,7 +81,7 @@ jQuery(document).ready(function () {
 jQuery('.owl-carousel-banner').owlCarousel({
   loop:true,
   margin:10,
-  dots: true,
+  dots: false,
   nav:false,
   responsive: {
       0: {
@@ -270,6 +270,14 @@ function prevTimeLine(){
   jQuery('.owl-linha-tempo').trigger('prev.owl.carousel');
 }
 
+function nextDepoimento(){
+  jQuery('.owl-depoimentos').trigger('next.owl.carousel');
+}
+
+function prevDepoimento(){
+  jQuery('.owl-depoimentos').trigger('prev.owl.carousel');
+}
+
 function nextDiferenciais(){
     jQuery('.owl-diferenciais').trigger('next.owl.carousel');
   }
@@ -298,9 +306,9 @@ jQuery('.owl-solucoes').owlCarousel({
 });
 
 jQuery('.owl-depoimentos').owlCarousel({
-  loop:true,
+  loop:false,
   margin:0,
-  dots: true,
+  dots: false,
   margin: 10,
   nav:false,
   responsive: {

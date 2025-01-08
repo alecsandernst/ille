@@ -20,6 +20,7 @@
     elseif(get_row_layout() == 'sessao_planos_banner' && get_sub_field('exibir') ):
         get_template_part('template-parts-blocos/sessao_planos_banner');
 
+
     elseif(get_row_layout() == 'sessao_beneficios' && get_sub_field('exibir') ):
         get_template_part('template-parts-blocos/sessao_beneficios');
 
@@ -85,6 +86,9 @@
 
     
     // Usadas Etick
+    
+    elseif(get_row_layout() == 'sessao_projetos' && get_sub_field('exibir') ):
+        get_template_part('template-parts-blocos/sessao_projetos');
 
     elseif(get_row_layout() == 'sessao_solucoes' && get_sub_field('exibir') ):
         get_template_part('template-parts-blocos/sessao_solucoes');
