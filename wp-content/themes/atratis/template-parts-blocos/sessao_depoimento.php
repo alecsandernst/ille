@@ -55,7 +55,7 @@ if($animI == 0):
 <section class="sessaoDepoimentos <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-3 title" data-aos='fade-up' data-aos-duration='1500' style="margin-bottom: 80px;">
+            <div class="col-lg-3 title" data-aos='fade-up' data-aos-duration='1500'>
                 <h4><?php echo $subtitulo; ?></h4>
                 <h2><?php echo $titulo; ?></h2>
                 <a href="<?php echo get_home_url(); ?>">    

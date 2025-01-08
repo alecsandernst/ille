@@ -64,38 +64,27 @@ if($animI == 0):
 ?>
 
 <section class="sessaoGaleriaCarrosel <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
-
-    
     <div class="container">
         <div class="row row-reverse">
             <div class="col-12">
-                <h2>
-                  <div class="title" data-aos='fade-left' data-aos-duration='1000'>
+                <div class="title" data-aos='fade-left' data-aos-duration='1000'>
                     <h2><?php echo $titulo; ?></h2>
-                  </div>
-                </h2>
-            </div>
-        </div>
-        <div class="row row-reverse" >
-
-            <!-- <div class="col-lg-7"> -->
-                <div class="conteiner-carrosel">
-                    <?php foreach($lista_imagens as $item): ?>
-                        <div class="item-galeria">
-                            <img src="<?php echo $item['imagem']['url'];?>" alt="<?php echo $item['imagem']['alt'];?>">
-                        </div>
-                    <?php endforeach; ?>
-                </div> 
-            <!-- </div> -->
-
-            <div class="col-lg-5 full-bloco">
-                <div class="title-caixa" data-aos='fade-left' data-aos-duration='1000'>
-                    <h2><?php echo $titulo_caixa; ?></h2>
-                    <p><?php echo $descricao; ?></p>
-                    <a href="<?php echo $link_do_cta; ?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 
+    <div class="conteiner-carrosel">
+        <?php foreach($lista_imagens as $item): ?>
+            <div class="item-galeria">
+                <img src="<?php echo $item['imagem']['url'];?>" alt="<?php echo $item['imagem']['alt'];?>">
+                <!-- <div class="overlaytexto">
+                    <p class="nome">adw</p>
+                    <p class="cargo">ada</p>
+                </div> -->
+            </div>
+
+        <?php endforeach; ?>
+    </div>  
+    
 </section>
