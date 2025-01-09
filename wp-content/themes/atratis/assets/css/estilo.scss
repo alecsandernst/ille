@@ -683,7 +683,7 @@ footer  {
         align-items: center !important;
         justify-content: space-between !important;
         width: 100%;
-        background: #F5EEE6 !important;
+        background: #DAA520 !important;
         padding-top: 14px;
         padding-bottom: 10px;
 
@@ -1171,6 +1171,33 @@ footer  {
         font-size: 16px;
         font-weight: 400;
         line-height: 29px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+.sessaoTextoBotao {
+    padding: 60px 0;
+
+    h2 {
+        max-width: 705px;
+        width: 100%;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: left;
+        margin-bottom: 12px;
+
+    }
+
+    p {
+        max-width: 480px;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 28px;
         text-align: left;
         margin-bottom: 20px;
     }
@@ -3014,7 +3041,8 @@ footer  {
             font-weight: 400;
             line-height: 47px;
             text-align: center;
-            max-width: 488px;
+            max-width: 535px;
+            color: white;
 
             span {
                 font-size: 37px;
@@ -3049,6 +3077,38 @@ footer  {
         img {
             object-fit: contain;
             transition: 0.5s ease-in-out;
+        }
+    }
+
+    .btnMarcas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .btn-marcas {
+            background: #fff !important;
+            color: #DAA520 !important;
+            transition: 0.5s ease-in-out;
+            padding: 12px 30px 12px 30px;
+            border-radius: 5px;
+            text-decoration: none !important;
+            display: block; 
+            margin-top: 20px;
+            width: fit-content;
+        
+            svg {
+                transition: 0.5s ease-in-out;
+            }
+        
+            // &:hover {
+            //     // background: $branco;
+        
+            //     // color: $primary !important;
+        
+            //     svg {
+            //         fill: $branco !important;
+            //     }
+            // }
         }
     }
 
@@ -3262,7 +3322,17 @@ footer  {
         }
 
     }
+    
+    .formulario {
+        background-color: #DAA520;
 
+
+        .wpcf7-submit {
+            border-radius: 5px;
+            background-color: #fff;
+            color: #DAA520;
+        }
+    }
 
 }
 

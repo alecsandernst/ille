@@ -197,7 +197,7 @@ jQuery('.owl-diferenciais').owlCarousel({
 
 jQuery('.owl-marcas').owlCarousel({
     loop:false,
-    dots: true,
+    dots: false,
     margin: 20,
     nav:false,
     responsive: {

@@ -15,9 +15,11 @@ $classe = get_sub_field('classe');
 $link_do_cta = get_sub_field('link_do_cta');
 $texto_do_cta = get_sub_field('texto_do_cta');
 
-$marcas = get_sub_field('marcas');
 
+$image = get_sub_field('imagem');
+$backgroundSection = get_sub_field('backgroundsection');
 $titulo = get_sub_field('titulo');
+$conteudo = get_sub_field('conteudo');
 
 $direction = $posicao == 0 ? 'row-reverse' : 'row';
 
@@ -49,34 +51,25 @@ if($animI == 0):
 
 ?>
 
-<section class="sessaoMarcas <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
+<section class="sessaoTextoBotao <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
 
+    
     <div class="container">
-        <div class="row align-items-center" style="flex-direction: <?php echo $direction; ?>">
-            <div class="col-12">
-                <div class="title">
-                    <h2 <?php echo $animacaoConteudo; ?>><?php echo $titulo; ?></h2>
-                </div>
+        <div class="row align-items-center" style="flex-direction: <?php echo $direction; ?>" >
+            
+            <div class="col-lg-8" style="margin-top: -80px;">
+                    
+                    <h2 style="<?php echo $corFonte;?>"><?php echo $titulo;?></h2>
+                    
+                    <?php if($link_do_cta): ?>
+                        <a href="<?php echo $link_do_cta;?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
+                    <?php endif; ?>
+                    
             </div>
-            <div class="col-12">
-                <div class="owl-carousel owl-marcas owl-theme">
-                <?php foreach($marcas as $itens){
-                    ?>
-                        <div class="box-marca" style="background: <?php echo $itens['background_box'];?>;">
-                            <img src="<?php echo $itens['logo']['url'];?>" alt="<?php echo $itens['logo']['alt'];?>">
-                        </div>
-                    <?php
-                }?>
-                </div>
+            <div class="col-lg-4">
+                <?php echo $conteudo;?>
             </div>
-            <div class="col-12">
-                <div class="btnMarcas">
-                <?php if($link_do_cta): ?>
-                    <a href="<?php echo $link_do_cta;?>" class="btn-marcas"><?php echo $texto_do_cta; ?></a>
-                <?php endif; ?>
-                </div>
-                
-            </div>
+            
         </div> 
     </div>
 
