@@ -96,6 +96,10 @@
     elseif(get_row_layout() == 'sessao_texto_botao' && get_sub_field('exibir') ):
         get_template_part('template-parts-blocos/sessao_texto_botao');
 
+    elseif(get_row_layout() == 'sessao_galeria_imagem' && get_sub_field('exibir') ):
+        get_template_part('template-parts-blocos/sessao_galeria_imagem');
+
+        
     elseif(get_row_layout() == 'sessao_segmentos' && get_sub_field('exibir') ):
         get_template_part('template-parts-blocos/sessao_segmentos');
 

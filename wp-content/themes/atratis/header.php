@@ -11,6 +11,8 @@
     
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
 </head>
 <body>
 
@@ -29,7 +31,7 @@
         $is_full_topo = get_field('add_top_full', 'option')
     ?>
 
-    <header style="background:<?php echo !is_home() ? '#F5EEE6' : '';?>; border-bottom: <?php echo !is_home() ? '1px solid #cad1eb' : '';?>;" class="desktop menupc">
+    <header style="background:<?php echo is_home() ? '#F5EEE6' : '#fff';?>; border-bottom: <?php echo !is_home() ? '1px solid #cad1eb' : '';?>;" class="desktop menupc">
         <div class="container">
             <div class="row">
                 <div class="col-12">

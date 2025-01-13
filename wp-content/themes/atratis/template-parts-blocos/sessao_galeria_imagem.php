@@ -12,16 +12,19 @@ $posicao = get_sub_field('posicao_conteudo');
 $animC = get_sub_field('escolha_animacao_conteudo');
 $animI = get_sub_field('escolha_animacao_imagem');
 $classe = get_sub_field('classe');
-$link_do_cta = get_sub_field('link_do_cta');
-$texto_do_cta = get_sub_field('texto_do_cta');
-
+$link_do_cta = get_sub_field('link_cta');
+$texto_do_cta = get_sub_field('texto_cta');
+$titulo_caixa = get_sub_field('titulo_caixa');
 
 $image = get_sub_field('imagem');
 $backgroundSection = get_sub_field('backgroundsection');
 $titulo = get_sub_field('titulo');
-$conteudo = get_sub_field('conteudo');
+$descricao = get_sub_field('descricao');
+$galeria = get_sub_field('galeria');
+
 
 $direction = $posicao == 0 ? 'row-reverse' : 'row';
+
 
 // [ANIMAÇÃO CONTEÚDO]
 if($animC == 0):
@@ -49,28 +52,31 @@ if($animI == 0):
                     $animacaoImagem = "data-aos='fade-right' data-aos-duration='1000' data-aos-delay='300'";
                 endif;
 
+
+                $args = array(
+                    'post_type' => 'segmentos',
+                    'posts_per_page' => 6,
+                    'order' => 'ASC',
+                );
+            
+                $query = new WP_Query($args);
+
 ?>
 
-<section class="sessaoTextoBotao <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
-
-    
+<section class="sessaoGaleriaImagem <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
     <div class="container">
-        <div class="row align-items-center" style="flex-direction: <?php echo $direction; ?>" >
-            
-            <div class="col-lg-7" style="margin-top: -80px;">
-                    
-                    <h2 style="<?php echo $corFonte;?>"><?php echo $titulo;?></h2>
-                    
-                    <?php if($link_do_cta): ?>
-                        <a href="<?php echo $link_do_cta;?>" class="btn-padrao"><?php echo $texto_do_cta; ?></a>
-                    <?php endif; ?>
-                    
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel owl-galeriaimagem owl-theme">
+                <div class="conteiner-carrosel">
+                    <?php foreach($galeria as $item): ?>
+                        <div class="imagem-galeria">
+                            <a href="<?php echo $item['imagem']['url'];?>" class="item-img imagem galImg img-clicavel" data-fancybox="images"><img src="<?php echo $item['imagem']['url'];?>" alt="<?php echo $item['imagem']['alt'];?>" ></a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                </div>
             </div>
-            <div class="col-lg-5" style="margin-top: -30px">
-                <?php echo $conteudo;?>
-            </div>
-            
-        </div> 
+        </div>
     </div>
-
 </section>

@@ -13,9 +13,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /illearquitetura/index.php [L]
 </IfModule>
 
-<Files wp-config.php>
-    order allow,deny
-    deny from all
-</Files>
-
 # END WordPress

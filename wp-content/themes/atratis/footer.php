@@ -190,6 +190,14 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <!-- <script src="<?php bloginfo("template_url"); ?>/build/js/scripts.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox]', {
+        Carousel: {
+            infinite: false,
+        },
+    });
+</script>
 
 <?php wp_footer(); ?>
 </body>

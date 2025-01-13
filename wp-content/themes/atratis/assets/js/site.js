@@ -208,15 +208,39 @@ jQuery('.owl-marcas').owlCarousel({
             items: 1
         },
         580: {
-            items: 2
-        },
-        800: {
             items: 3
         },
-        1000: {
+        800: {
             items: 4
+        },
+        1000: {
+            items: 5
         }
     }
+});
+
+jQuery('.owl-galeriaimagem').owlCarousel({
+  loop:false,
+  dots: true,
+  margin: 20,
+  nav:false,
+  responsive: {
+      0: {
+          items: 1
+      },
+      400: {
+          items: 1
+      },
+      580: {
+          items: 1
+      },
+      800: {
+          items: 2
+      },
+      1000: {
+          items: 2
+      }
+  }
 });
 
 

@@ -49,6 +49,14 @@ if($animI == 0):
                     $animacaoImagem = "data-aos='fade-right' data-aos-duration='1000' data-aos-delay='300'";
                 endif;
 
+
+                $args = array(
+                    'post_type' => 'projetos',
+                    'posts_per_page' => 6,
+                    'order' => 'ASC',
+                );
+            
+                $query = new WP_Query($args);
 ?>
 
 <section class="sessaoProjetos <?php echo $classe; ?> <?php echo $parallax; ?> " style="<?php echo $geraisCSS; ?>" <?php echo $animacao; ?>>
@@ -70,28 +78,28 @@ if($animI == 0):
         </div>
         <div class="row align-items-center">
             <div class="col-lg-12">
-                    <?php if (have_rows('galeria_projetos')): ?>
-                        <div class="galeria">
                         <div class="owl-projetos owl-carousel owl-theme">
-                            <?php while (have_rows('galeria_projetos')): the_row(); 
-                                $imagem_projetos = get_sub_field('imagem_projetos');
-                                $titulo_texto = get_sub_field('titulo_texto');
-                                $texto_imagem = get_sub_field('texto_imagem'); ?>
-                                
+                        <?php if ($query->have_posts()): ?>
+                            <?php while ($query->have_posts()): $query->the_post(); 
+                                       
+                                $titulo_overlay = get_field('titulo_overlay');
+                                $conteudo_overlay = get_field('conteudo_overlay');
+                            ?>
+                            
                                 <div class="galeria-item">
-                                    <img src="<?php echo esc_url($imagem_projetos['url']); ?>" alt="<?php echo esc_attr($imagem_projetos['alt']); ?>">
-                                    
+                                    <img src="<?php echo the_post_thumbnail_url();?>">                            
                                     <div class="overlay">
                                         <div class="texto">
-                                            <h3><?php echo esc_html($titulo_texto); ?></h3>
-                                            <p><?php echo esc_html($texto_imagem); ?></p>
+                                            <a href="<?php the_permalink(); ?>">
+                                            <h3><?php echo $titulo_overlay; ?></h3>
+                                            <p><?php echo $conteudo_overlay; ?></p></a>
                                         </div>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
                             </div>
-                        </div>
-                    <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        </>
             </div>
             <div class="col-lg-12">
                 <div class="btnProjetos">
